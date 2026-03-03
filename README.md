@@ -1,4 +1,4 @@
-# [RENoMafex.github.io](https://RENoMafex.github.io)
+# [malte-schilling.eu](https://malte-schilling.eu)
 
 This is my personal homepage, it's main purpose is for me to learn a bit of HTML, CSS and JS.
 
