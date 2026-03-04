@@ -50,10 +50,10 @@ q2gsHQxyMIMO
         <script>
             const today = new Date();
             const birthday = new Date("1995-03-26");
-            const age = today.getFullYear() - birthday.getFullYear();
+            const age = Math.abs(today - birthday) / (3600 * 1000 * 24 * 365.25);
             let months = today.getMonth() - birthday.getMonth();
             let days = today.getDate() - birthday.getDate();
-            let years = age;
+            let years = today.getFullYear() - birthday.getFullYear();
 
             if (months < 0 || (months === 0 && days < 0)) {
                 years--;
@@ -85,7 +85,7 @@ q2gsHQxyMIMO
             }
 
             document.getElementById("preciseAge").title = years + " years, " + months + monthsText + days + daysText;
-            document.getElementById("age").textContent = age;
+            document.getElementById("age").textContent = Math.floor(age);
         </script>
         #include "back_footer.html"
     </body>
