@@ -8,6 +8,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/myicons/apple-touch-icon.png">
     <link rel="manifest" href="/assets/myicons/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
     <title>About Me - Malte Schilling</title>
 </head>
 <body>
@@ -84,48 +85,42 @@ q2gsHQxyMIMO
     </div><!-- End of main content. -->
     <!-- Inside the following script my age gets calculated, so that this side stays up to date automatically. -->
     <script>
-        const today = new Date();
-        const birthday = new Date("1995-03-26");
-        const age = Math.abs(today - birthday) / (3600 * 1000 * 24 * 365.25);
-        let months = today.getMonth() - birthday.getMonth();
-        let days = today.getDate() - birthday.getDate();
-        let years = today.getFullYear() - birthday.getFullYear();
-
-        if (months < 0 || (months === 0 && days < 0)) {
-            years--;
-            months += 12;
-        }
-
-        if (days < 0) {
-            months--;
-            const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-            days += lastDayOfMonth
-        }
-
-        if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
-            years--;
-        }
-
-        let daysText = "";
-        if (days === 0 || days > 1) {
-            daysText = " days.";
-        } else {
-            daysText = " day.";
-        }
-
-        let monthsText = "";
-        if (months === 0 || months > 1) {
-            monthsText = " months and ";
-        } else {
-            monthsText = " month and ";
-        }
-
-        document.getElementById("preciseAge").title = years + " years, " + months + monthsText + days + daysText;
-        document.getElementById("age").textContent = Math.floor(age);
+            const today = new Date();
+            const birthday = new Date("1995-03-26");
+            const age = Math.abs(today - birthday) / (3600 * 1000 * 24 * 365.25);
+            let months = today.getMonth() - birthday.getMonth();
+            let days = today.getDate() - birthday.getDate();
+            let years = today.getFullYear() - birthday.getFullYear();
+            if (months < 0 || (months === 0 && days < 0)) {
+                years--;
+                months += 12;
+            }
+            if (days < 0) {
+                months--;
+                const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+                days += lastDayOfMonth
+            }
+            if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
+                years--;
+            }
+            let daysText = "";
+            if (days === 0 || days > 1) {
+                daysText = " days.";
+            } else {
+                daysText = " day.";
+            }
+            let monthsText = "";
+            if (months === 0 || months > 1) {
+                monthsText = " months and ";
+            } else {
+                monthsText = " month and ";
+            }
+            document.getElementById("preciseAge").title = years + " years, " + months + monthsText + days + daysText;
+            document.getElementById("age").textContent = Math.floor(age);
     </script>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Nov 15 2025"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Mar 27 2026"</span>
     </div>
 </body>
 </html>
