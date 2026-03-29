@@ -190,7 +190,7 @@ table.projects tr td {
     padding-right: 1em;
 }
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
     #navbar {
         position: fixed;
         width: 100vw;
