@@ -225,7 +225,7 @@ table.projects tr td {
 
     #navbar.responsive a.icon {
         position: absolute;
-        right: 0;
+        right: 8px;
         top: 0;
     }
 
