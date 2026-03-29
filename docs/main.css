@@ -339,6 +339,10 @@ table.projects tr td {
     min-width: 100%;
 }
 
+#navbar .dropdown .dropdown-content.show {
+    display: block;
+}
+
 #navbar .dropdown-content a {
     float: none !important;
     display: block;

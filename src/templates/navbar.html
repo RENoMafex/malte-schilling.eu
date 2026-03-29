@@ -3,7 +3,7 @@
     <a href=HOMEURL>Home</a>
     <a href="about_me">About me</a>
     <div class="placeholder"/>
-    <a href="programming_projects" class="dropbutton">My Programming Projects</a>
+    <a href="programming_projects">My Programming Projects</a>
     <div class="dropdown">
         <a href="arduino_projects" class="dropbutton">
             My Arduino Projects
@@ -52,10 +52,27 @@
                 }
             }
         });
+
+        document.querySelectorAll('.dropbutton').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                const dropdown = button.closest('.dropdown');
+                if (!dropdown) return;
+                const content = dropdown.querySelector('.dropdown-content');
+                if (!content) return;
+                content.classList.toggle('show');
+            });
+        });
     });
 
+    const nav = document.getElementById("navbar");
+
+    if (nav.classList.contains("responsive")) {
+        const dropbuttons = document.getElementsByClassName("dropbutton");
+    }
+
     function openNav() {
-        var nav = document.getElementById("navbar");
+        const nav = document.getElementById("navbar");
 
         window.scrollTo(0,0);
 
