@@ -214,21 +214,40 @@ table.projects tr td {
         float: right !important;
     }
 
-    #navbar a:not(:first-child), .dropdown .dropbutton{
+    #navbar a:not(:first-child), #navbar .dropdown .dropbutton{
         display: none;
     }
 
-    #navbar.responsive {position: relative;}
-
-    #navbar.responsive a {
-        right: 0;
-        top: 0;
-        float: none;
-        display: block;
-        width: 100%;
+    #navbar.responsive {
+        position: relative;
+        margin-top: -8px;
     }
 
-    #footer {
+    #navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #navbar.responsive a {
+        float: none !important;
+        display: block;
+        text-align: left !important;
+    }
+
+    #navbar.responsive .dropdown {float: none !important;}
+    #navbar.responsive .dropdown-content {position: relative;}
+    #navbar.responsive .dropdown .dropbutton {
+        display: block;
+        width: 100%;
+        text-align: left !important;
+    }
+
+    #navbar .placeholder {
+        display: none;
+    }
+
+    #footer .left, #footer .right {
         display: none !important;
     }
 }
