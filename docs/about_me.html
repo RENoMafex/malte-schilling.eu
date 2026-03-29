@@ -13,7 +13,7 @@
     <title>About Me - Malte Schilling</title>
 </head>
 <body>
-    <nav id="navbar">
+    <nav id="navbar" class="topnav">
         <a href="https://malte-schilling.eu">Home</a> <a href="about_me">About me</a>
         <div class="placeholder"></div><a href="programming_projects" class="dropbutton">My Programming Projects</a>
         <div class="dropdown">
@@ -22,7 +22,7 @@
                 <a href="arduino_alexa_timer">Clock for Alexa</a>
             </div>
         </div>
-        <div class="placeholder"></div><a href="credits" style="float: right; margin-right: 16px;">Credits and Licenses</a>
+        <div class="placeholder"></div><a href="javascript:void(0);" class="icon" style="margin-right: 16px;" onclick="openNav()"><i class="fa fa-bars"></i></a> <a href="credits" style="float: right; margin-right: 16px;">Credits and Licenses</a>
         <div class="dropdown" style="float: right; margin-right: 16px;">
             <a href="my_testing_page" class="dropbutton">Some Pages for testing <i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
@@ -52,6 +52,14 @@
             }
         });
     });
+    function openNav() {
+        var nav = document.getElementById("navbar");
+        if (nav.className === "topnav") {
+            nav.className = "responsive";
+        }else{
+            nav.className = "topnav";
+        }
+    }
     </script> <!-- The following div is simply a container for the main content. -->
     <div style="max-width: 1000px;">
         <h1>Malte Schilling</h1>

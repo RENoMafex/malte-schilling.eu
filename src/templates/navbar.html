@@ -1,5 +1,5 @@
 #include "defines"
-<nav id="navbar">
+<nav id="navbar" class="topnav">
     <a href=HOMEURL>Home</a>
     <a href="about_me">About me</a>
     <div class="placeholder"/>
@@ -14,6 +14,9 @@
         </div>
     </div>
     <div class="placeholder"/>
+    <a href="javascript:void(0);" class="icon" style="margin-right: 16px;" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+    </a>
     <a href="credits" style="float: right; margin-right: 16px;">Credits and Licenses</a>
     <div class="dropdown" style="float: right; margin-right: 16px;">
         <a href="my_testing_page" class="dropbutton">
@@ -50,4 +53,14 @@
             }
         });
     });
+
+    function openNav() {
+        var nav = document.getElementById("navbar");
+
+        if (nav.className === "topnav") {
+            nav.className = "responsive";
+        }else{
+            nav.className = "topnav";
+        }
+    }
 </script>
