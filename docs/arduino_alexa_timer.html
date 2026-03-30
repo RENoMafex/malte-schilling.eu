@@ -42,16 +42,16 @@
 <body>
     <nav id="navbar">
         <a href="https://malte-schilling.eu">Home</a> <a href="about_me">About me</a>
-        <div class="placeholder"></div><a href="programming_projects" class="dropbutton">My Programming Projects</a>
+        <div class="placeholder"></div><a href="programming_projects">My Programming Projects</a>
         <div class="dropdown">
-            <a href="arduino_projects" class="dropbutton">My Arduino Projects</a>
+            <a href="arduino_projects" class="dropbutton">My Arduino Projects <i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
                 <a href="arduino_alexa_timer">Clock for Alexa</a>
             </div>
         </div>
-        <div class="placeholder"></div><a href="credits" style="float: right; margin-right: 16px;">Credits and Licenses</a>
-        <div class="dropdown" style="float: right; margin-right: 16px;">
-            <a href="my_testing_page" class="dropbutton">Some Pages for testing</a>
+        <div class="placeholder"></div><a href="javascript:void(0);" class="icon" style="margin-right: 16px;" onclick="openNav()"><i class="fa fa-bars"></i></a> <a href="credits" style="float: right; margin-right: 16px;">Credits and Licenses</a>
+        <div class="dropdown" style="float: right;">
+            <a href="my_testing_page" class="dropbutton">Some Pages for testing <i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
                 <a href="csstest">CSS-Test</a> <a href="jsscoreboard">Scoreboard for 2 (JS)</a>
             </div>
@@ -78,7 +78,26 @@
                 }
             }
         });
+        document.querySelectorAll('.dropbutton').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                const dropdown = button.closest('.dropdown');
+                if (!dropdown) return;
+                const content = dropdown.querySelector('.dropdown-content');
+                if (!content) return;
+                content.classList.toggle('show');
+            });
+        });
     });
+    function openNav() {
+        const nav = document.getElementById("navbar");
+        window.scrollTo(0,0);
+        if (!nav.classList.contains("responsive")) {
+            nav.classList.add("responsive");
+        }else{
+            nav.classList.remove("responsive");
+        }
+    }
     </script>
     <h1>AlexaTimer - A Clock for Alexa</h1>
     <h3 style="margin-top: 0;">which is also Capable of displaying timers</h3>
@@ -144,7 +163,7 @@
     <div class="dclear"></div>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Mar 27 2026"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Mar 30 2026"</span>
     </div>
 </body>
 </html>

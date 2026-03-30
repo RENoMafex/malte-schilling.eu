@@ -10,7 +10,7 @@ body {
     font-size: 1rem;
 }
 
-h1, h2, h3, h4, h5 ,h6 {
+h1, h2, h3, h4, h5, h6 {
     margin-top: 1.0rem;
     margin-bottom: 0.0rem;
 }
@@ -190,6 +190,68 @@ table.projects tr td {
     padding-right: 1em;
 }
 
+@media screen and (min-width: 1024px) {
+    #navbar .dropdown:hover .dropdown-content{
+        display: block;
+    }
+
+    #navbar a, #navbar a:visited, #navbar .dropbutton, #navbar .placeholder {
+        display: block;
+    }
+
+    #navbar a:hover, #navbar a:active, #navbar .dropdown:hover .dropbutton {
+        display: block;
+    }
+
+    #navbar .icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #navbar .icon {
+        display: block !important;
+        float: right !important;
+    }
+
+    #navbar a:not(:first-child), #navbar .dropdown .dropbutton{
+        display: none;
+    }
+
+    #navbar.responsive {
+        position: relative;
+        margin-top: -8px;
+    }
+
+    #navbar.responsive a.icon {
+        position: absolute;
+        right: 8px;
+        top: 0;
+    }
+
+    #navbar.responsive a {
+        float: none !important;
+        display: block;
+        text-align: left !important;
+    }
+
+    #navbar.responsive .dropdown {float: none !important;}
+    #navbar.responsive .dropdown-content {position: relative;}
+    #navbar.responsive .dropdown .dropbutton {
+        display: block;
+        width: 100%;
+        text-align: left !important;
+    }
+
+    #navbar .placeholder {
+        display: none;
+    }
+
+    #footer .left, #footer .right {
+        display: none !important;
+    }
+}
+
 #navbar {
     position: fixed;
     width: 100vw;
@@ -203,7 +265,6 @@ table.projects tr td {
 /* "#navbar a:visited" needed? */
 #navbar a, #navbar a:visited, #navbar .dropbutton, #navbar .placeholder {
     float: left;
-    display: block;
     text-align: center;
     padding: 14px;
     text-decoration: none;
@@ -211,7 +272,6 @@ table.projects tr td {
 
 #navbar a:hover, #navbar a:active, #navbar .dropdown:hover .dropbutton {
     float: left;
-    display: block;
     color: #b0b0b0;
     background-color: #1a1a1a;
     text-align: center;
@@ -234,6 +294,7 @@ table.projects tr td {
 #navbar a.active, #navbar a.active:visited {
     background-color: #2a2a2a;
     box-shadow: inset 0 -2em 0.5em -1.85em #ff4400;
+    /* border-bottom: 0.15em solid #ff4400; */
     color: #ff4400 !important;
     font-weight: bold;
 }
@@ -259,13 +320,13 @@ table.projects tr td {
 }
 
 #navbar .dropdown:hover .dropdown-content {
-    display: block;
     padding: -1.5px;
     border: 1.5px solid #1a1a1a;
     box-shadow: inset 0 0 0 1px #ff4400;
 }
 
 #navbar .dropdown:hover .dropdown-content a.active {
+    /* border: 1px solid #ff4400; */
     box-shadow: inset 0 0 3px 2px #ff4400;
 }
 
@@ -276,6 +337,10 @@ table.projects tr td {
     top: 100%;
     left: 0;
     min-width: 100%;
+}
+
+#navbar .dropdown .dropdown-content.show {
+    display: block;
 }
 
 #navbar .dropdown-content a {
