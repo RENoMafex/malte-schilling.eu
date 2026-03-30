@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
 </head>
 <body>
-    <nav id="navbar" class="topnav">
+    <nav id="navbar">
         <a href="https://malte-schilling.eu">Home</a> <a href="about_me">About me</a>
         <div class="placeholder"></div><a href="programming_projects">My Programming Projects</a>
         <div class="dropdown">
@@ -62,17 +62,13 @@
             });
         });
     });
-    const nav = document.getElementById("navbar");
-    if (nav.classList.contains("responsive")) {
-        const dropbuttons = document.getElementsByClassName("dropbutton");
-    }
     function openNav() {
         const nav = document.getElementById("navbar");
         window.scrollTo(0,0);
-        if (nav.className === "topnav") {
-            nav.className = "responsive";
+        if (!nav.classList.contains("responsive")) {
+            nav.classList.add("responsive");
         }else{
-            nav.className = "topnav";
+            nav.classList.remove("responsive");
         }
     }
     </script>
@@ -95,7 +91,7 @@
     <div class="dclear"></div>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Mar 29 2026"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Mar 30 2026"</span>
     </div>
 </body>
 </html>

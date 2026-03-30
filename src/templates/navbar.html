@@ -1,5 +1,5 @@
 #include "defines"
-<nav id="navbar" class="topnav">
+<nav id="navbar">
     <a href=HOMEURL>Home</a>
     <a href="about_me">About me</a>
     <div class="placeholder"/>
@@ -70,10 +70,10 @@
 
         window.scrollTo(0,0);
 
-        if (nav.className === "topnav") {
-            nav.className = "responsive";
+        if (!nav.classList.contains("responsive")) {
+            nav.classList.add("responsive");
         }else{
-            nav.className = "topnav";
+            nav.classList.remove("responsive");
         }
     }
 </script>
