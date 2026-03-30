@@ -239,7 +239,6 @@ table.projects tr td {
     #navbar.responsive .dropdown-content {position: relative;}
     #navbar.responsive .dropdown .dropbutton {
         display: block;
-        width: 100%;
         text-align: left !important;
     }
 
