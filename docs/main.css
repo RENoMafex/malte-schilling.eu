@@ -323,14 +323,12 @@ table.projects tr td {
     position: relative;
 }
 
-#navbar .dropdown:hover .dropdown-content {
+#navbar .dropdown .dropdown-content {
     padding: -1.5px;
-    border: 1.5px solid #1a1a1a;
     box-shadow: inset 0 0 0 1px #ff4400;
 }
 
 #navbar .dropdown:hover .dropdown-content a.active {
-    /* border: 1px solid #ff4400; */
     box-shadow: inset 0 0 3px 2px #ff4400;
 }
 
