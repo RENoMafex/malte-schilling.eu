@@ -246,7 +246,7 @@ table.projects tr td {
         display: none;
     }
 
-    #navbar a.active {
+    #navbar a.active, #navbar a.active:hover {
         box-shadow: inset #ff4400 0 2em 0.5em -1.85em, inset #ff4400 0 -2em 0.5em -1.85em !important;
     }
 
