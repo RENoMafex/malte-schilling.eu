@@ -81,31 +81,31 @@ pre {
 }
 
 code.func {
-    color: cyan !important;
+    color: cyan;
 }
 
 code.var {
-    color: red !important;
+    color: red;
 }
 
 code.const {
-    color: darkorange !important;
+    color: darkorange;
 }
 
 code.com {
-    color: darkgray !important;
+    color: darkgray;
 }
 
 code.lit {
-    color: lightgreen !important;
+    color: lightgreen;
 }
 
 code.t {
-    color: gold !important;
+    color: gold;
 }
 
 code.kw {
-    color: violet !important;
+    color: violet;
 }
 
 div.round {
@@ -381,3 +381,18 @@ table.projects tr td {
     right: 1em;
 }
 
+@media print {
+    #navbar {display: none;}
+    #footer {display: none;}
+    body {
+        background: #fff;
+        color: #000;
+    }
+    a:any-link {
+        color: #888;
+    }
+    pre, code {
+        background: #ddd;
+        color: #000;
+    }
+}
