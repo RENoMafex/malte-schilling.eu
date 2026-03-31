@@ -63,6 +63,7 @@
 
     const links = document.querySelectorAll('#navbar a');
     const currentPath = window.location.pathname;
+    const nav = document.getElementById('navbar');
     links.forEach(link => {
         const linkPath = new URL(link.href).pathname;
         if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
@@ -81,6 +82,9 @@
         });
         document.querySelectorAll('.dropbutton').forEach(button => {
             button.addEventListener('click', (event) => {
+                if (!nav.classList.contains('responsive')) {
+                    return;
+                }
                 event.preventDefault();
                 const dropdown = button.closest('.dropdown');
                 if (!dropdown) return;
@@ -91,12 +95,11 @@
         });
     });
     function openNav() {
-        const nav = document.getElementById("navbar");
         window.scrollTo(0,0);
-        if (!nav.classList.contains("responsive")) {
-            nav.classList.add("responsive");
+        if (!nav.classList.contains('responsive')) {
+            nav.classList.add('responsive');
         }else{
-            nav.classList.remove("responsive");
+            nav.classList.remove('responsive');
         }
     }
     </script>
