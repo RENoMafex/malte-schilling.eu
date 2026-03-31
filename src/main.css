@@ -250,6 +250,10 @@ table.projects tr td {
         display: none;
     }
 
+    #navbar .dropdown-content {
+        padding-left: 42px;
+    }
+
     #navbar a.active, #navbar a.active:hover, #navbar .dropdown.dropbutton.active:hover {
         box-shadow: inset #ff4400 0 2em 0.5em -1.85em, inset #ff4400 0 -2em 0.5em -1.85em !important;
     }
@@ -287,7 +291,7 @@ table.projects tr td {
     text-decoration: none;
 }
 
-#navbar a:hover, #navbar .dropdown:hover, #navbar .dropbutton:hover {
+#navbar a:hover, #navbar .dropbutton:hover {
     box-shadow: inset darkgray 0 0 3px 2px !important;
 }
 
@@ -321,11 +325,6 @@ table.projects tr td {
     float: left;
     overflow: visible;
     position: relative;
-}
-
-#navbar .dropdown .dropdown-content {
-    padding: -1.5px;
-    box-shadow: inset 0 0 0 1px #ff4400;
 }
 
 #navbar .dropdown:hover .dropdown-content a.active {
