@@ -13,30 +13,37 @@
     <title>Alexa Clock - Malte Schilling</title>
     <style>
             p {max-width: 1000px;}
-            .TOC {color: #dd7700;}
-            .TOC ul {
-                list-style: none;
-                padding-left: 16px;
-                margin-top: 0;
-                margin-bottom: 0;
+            @media screen {
+                .TOC {color: #dd7700;}
+                .TOC ul {
+                    list-style: none;
+                    padding-left: 16px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+                .TOC li {
+                    width: fit-content;
+                }
+                .TOC li::before {
+                    content: "> ";
+                    font-weight: normal;
+                }
+                .TOC li:hover::before {
+                    font-weight: bold;
+                    color: #ff8800;
+                }
+                .TOC a {
+                    color: inherit;
+                }
+                .TOC a:hover {
+                    font-weight: bold;
+                    color: #ff8800;
+                }
             }
-            .TOC li {
-                width: fit-content;
-            }
-            .TOC li::before {
-                content: "> ";
-                font-weight: normal;
-            }
-            .TOC li:hover::before {
-                font-weight: bold;
-                color: #ff8800;
-            }
-            .TOC a {
-                color: inherit;
-            }
-            .TOC a:hover {
-                font-weight: bold;
-                color: #ff8800;
+            @media print {
+                .TOC {
+                    display: none;
+                }
             }
     </style>
 </head>
@@ -114,7 +121,7 @@
     <div class="tclear"></div>
     <h4><a href="https://github.com/RENoMafex/UnoR4WiFi_AlexaTimer" target="_blank" rel="noopener noreferrer">Link to the Repo</a></h4>
     <div class="dclear"></div>
-    <h4 style="margin: 0;">Table of Contents:</h4>
+    <h4 style="margin: 0;" class="TOC">Table of Contents:</h4>
     <nav class="TOC">
         <ul>
             <li>
@@ -167,7 +174,7 @@
     <div class="dclear"></div>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Mar 31 2026"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Apr 3 2026"</span>
     </div>
 </body>
 </html>

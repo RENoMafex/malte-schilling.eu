@@ -388,11 +388,44 @@ table.projects tr td {
         background: #fff;
         color: #000;
     }
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
     a:any-link {
         color: #888;
     }
     pre, code {
         background: #ddd;
         color: #000;
+    }
+    .shape, .round {
+        background-color: #ddd !important;
+    }
+    code.func {
+        color: blue;
+    }
+
+    code.var {
+        color: red;
+    }
+
+    code.const {
+        color: darkorange;
+    }
+
+    code.com {
+        color: gray;
+    }
+
+    code.lit {
+        color: green;
+    }
+
+    code.t {
+        color: olive;
+    }
+
+    code.kw {
+        color: darkviolet;
     }
 }
