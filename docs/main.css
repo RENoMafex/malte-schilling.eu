@@ -270,8 +270,9 @@ table.projects tr td {
 }
 
 #navbar {
+    container-name: navbar;
     position: fixed;
-    width: 100vw;
+    width: calc(100vw - 16px);
     margin: 0px -8px 0px;
     padding: 0px 8px 0px;
     top: 0;
@@ -361,6 +362,7 @@ table.projects tr td {
 }
 
 #footer {
+    container-name: footer;
     position: fixed;
     display: flex;
     justify-content: center;
