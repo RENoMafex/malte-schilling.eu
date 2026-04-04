@@ -255,7 +255,12 @@ table.projects tr td {
     }
 
     #navbar a.active, #navbar a.active:hover, #navbar .dropdown.dropbutton.active:hover {
-        box-shadow: inset #ff4400 0 2em 0.5em -1.85em, inset #ff4400 0 -2em 0.5em -1.85em !important;
+        box-shadow:
+            inset #ff4400 0 2em 0.5em -1.85em,
+            inset #ff4400 0 -2em 0.5em -1.85em,
+            inset #ff4400 2em 0 0.5em -1.85em,
+            inset #ff4400 -2em 0 0.5em -1.85em
+        !important;
     }
 
     #footer .left, #footer .right {
