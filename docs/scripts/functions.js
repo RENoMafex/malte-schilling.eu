@@ -11,4 +11,3 @@ function openNav() {
         nav.classList.remove('responsive');
     }
 }
-export {};

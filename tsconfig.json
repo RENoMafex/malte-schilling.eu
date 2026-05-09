@@ -7,7 +7,7 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "es6",
+    "module": "preserve",
     "target": "es6",
 
     // Other Outputs
