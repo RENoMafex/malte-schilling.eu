@@ -9,7 +9,7 @@
     <link rel="manifest" href="/assets/myicons/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"><script src="/scripts/functions.js"></script><script src="/scripts/navbar.js"></script>
     <title>About Me - Malte Schilling</title>
 </head>
 <body>
@@ -31,50 +31,7 @@
         </div>
     </nav><br>
     <br>
-    <script>
-
-    const links = document.querySelectorAll('#navbar a');
-    const currentPath = window.location.pathname;
-    const nav = document.getElementById('navbar');
-    links.forEach(link => {
-        const linkPath = new URL(link.href).pathname;
-        if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
-            link.classList.add('active');
-        }
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-            const isActive = dropdown.querySelector('.dropdown-content a.active');
-            if (isActive) {
-                const dropbutton = dropdown.querySelector('.dropbutton');
-                if (dropbutton) {
-                    dropbutton.classList.add('active');
-                }
-            }
-        });
-        document.querySelectorAll('.dropbutton').forEach(button => {
-            button.addEventListener('click', (event) => {
-                if (!nav.classList.contains('responsive')) {
-                    return;
-                }
-                event.preventDefault();
-                const dropdown = button.closest('.dropdown');
-                if (!dropdown) return;
-                const content = dropdown.querySelector('.dropdown-content');
-                if (!content) return;
-                content.classList.toggle('show');
-            });
-        });
-    });
-    function openNav() {
-        window.scrollTo(0,0);
-        if (!nav.classList.contains('responsive')) {
-            nav.classList.add('responsive');
-        }else{
-            nav.classList.remove('responsive');
-        }
-    }
-    </script> <!-- The following div is simply a container for the main content. -->
+    <script></script> <!-- The following div is simply a container for the main content. -->
     <div style="max-width: 1000px;">
         <h1>Malte Schilling</h1>
         <p>Hi, my name is Malte Schilling and I am <abbr id="preciseAge"><span id="age"><noscript>31</noscript></span></abbr> years old.<br>
@@ -106,7 +63,7 @@ q2gsHQxyMIMO
 <code class="com">-----END PGP PUBLIC KEY BLOCK-----</code></pre>
         <div class="dclear"></div>
     </div><!-- End of main content. -->
-    <!-- Inside the following script my age gets calculated, so that this side stays up to date automatically. -->
+    <!-- Inside the following script my age gets calculated, so that this site stays up to date automatically. -->
     <script>
             const today = new Date();
             const birthday = new Date("1995-03-26");
@@ -143,7 +100,7 @@ q2gsHQxyMIMO
     </script>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Mar 31 2026"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "May 9 2026"</span>
     </div>
 </body>
 </html>
