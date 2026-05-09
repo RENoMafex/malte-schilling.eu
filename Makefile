@@ -11,8 +11,11 @@ OUT_HTML := $(addprefix $(OUT_DIR)/, $(notdir $(SRC_HTML)))
 SRC_CSS := $(wildcard $(SRC_DIR)/*.css)
 OUT_CSS := $(addprefix $(OUT_DIR)/, $(notdir $(SRC_CSS)))
 
+SRC_JS := $(wildcard $(SRC_DIR)/scripts/*.js)
+OUT_JS := $(addprefix $(OUT_DIR)/scripts/, $(notdir $(SRC_JS)))
 
-all: $(OUT_HTML) $(OUT_CSS)
+
+all: $(OUT_HTML) $(OUT_CSS) $(OUT_JS)
 
 $(OUT_DIR)/%.html: $(SRC_DIR)/%.html $(wildcard $(TEMPLATES_DIR)/*)
 	@echo "Generating $@" 1>&2
@@ -33,3 +36,6 @@ $(OUT_DIR)/%.css: $(SRC_DIR)/%.css
 	@echo "Replacing $@"
 	@cp -f $< $@
 
+$(OUT_DIR)/%.js: $(SRC_DIR)/%.js
+	@echo "Replacing $@"
+	@cp -f $< $@
