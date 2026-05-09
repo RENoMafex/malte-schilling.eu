@@ -1,5 +1,4 @@
-//@ts-check
-
+//@ts-ignore
 function openNav() {
 	const nav = document.getElementById('navbar');
 

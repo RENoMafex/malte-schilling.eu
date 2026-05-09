@@ -1,12 +1,13 @@
-//@ts-check
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('#navbar a');
     const currentPath = window.location.pathname;
     const nav = document.getElementById('navbar');
     links.forEach(link => {
-        const linkPath = new URL(link.href).pathname;
-        if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
-            link.classList.add('active');
+        if (link instanceof HTMLAnchorElement) {
+            const linkPath = new URL(link.href).pathname;
+            if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
+                link.classList.add('active');
+            }
         }
     });
     document.querySelectorAll('.dropdown').forEach(dropdown => {
