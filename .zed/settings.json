@@ -1,0 +1,23 @@
+{
+	"file_scan_exclusions": [
+		"docs",
+		".vscode",
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/.DS_Store",
+		"**/Thumbs.db",
+	],
+	"format_on_save": "off",
+	"languages": {
+		"HTML": {
+			"hard_tabs": true,
+			"tab_size": 4,
+			"soft_wrap": "editor_width",
+		},
+		"TypeScript": {
+			"hard_tabs": true,
+			"tab_size": 4,
+		},
+	},
+}
