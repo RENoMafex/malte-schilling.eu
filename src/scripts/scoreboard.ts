@@ -25,33 +25,33 @@ function recalc(player: number, times: number, points: Points) {
 	input.value = "";
 }
 
-function wordToPoints(string: string) {
-	let int = 0;
-	string = string.toUpperCase();
-	if (!isNaN(parseInt(string))) {
-		int = parseInt(string);
+function wordToPoints(word: string) {
+	let points: number = 0;
+	word = word.toUpperCase();
+	if (!isNaN(parseInt(word))) {
+		points = parseInt(word);
 	} else {
-		for (let i = 0; i < string.length; i++) {
-			let c = string[i];
+		for (let i: number = 0; i < word.length; i++) {
+			let c: string = word[i]!;
 			if (c == 'E' || c == 'N' || c == 'S' || c == 'I' || c == 'R' || c == 'T' || c == 'U' || c == 'A' || c == 'D') {
-				int += 1;
+				points += 1;
 			} else if (c == 'H' || c == 'G' || c == 'L' || c == 'O') {
-				int += 2;
+				points += 2;
 			} else if (c == 'M' || c == 'B' || c == 'W' || c == 'Z') {
-				int += 3;
+				points += 3;
 			} else if (c == 'C' || c == 'F' || c == 'K' || c == 'P') {
-				int += 4;
+				points += 4;
 			} else if (c == 'Ä' || c == 'J' || c == 'Ü' || c == 'V') {
-				int += 6;
+				points += 6;
 			} else if (c == 'Ö' || c == 'X') {
-				int += 8;
+				points += 8;
 			} else if (c == 'Q' || c == 'Y') {
-				int += 10;
+				points += 10;
 			} else {
 				continue;
 			}
 		}
 	}
 
-	return int;
+	return points;
 }
